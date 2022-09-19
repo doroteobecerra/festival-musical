@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    background-color: v.$verde;
+    h1{
+        color: v.$blanco;
+    }
+    @include m.mq(v.$phone){
+        background-color: v.$negro;
+    }
+    a{
+        color: v.$blanco;
+    }
+}
+
