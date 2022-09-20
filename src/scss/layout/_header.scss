@@ -5,12 +5,40 @@
     background-color: v.$verde;
     h1{
         color: v.$blanco;
-    }
-    @include m.mq(v.$phone){
-        background-color: v.$negro;
-    }
-    a{
-        color: v.$blanco;
+        text-align: center;
+        @include m.mq(v.$teblet){
+            margin: 0;
+            font-size: 3rem;
+        }
     }
 }
-
+.navegacion-principal{
+    padding: 2rem;
+    a{
+        color: v.$blanco;
+        text-align: center;
+        display: block;
+        font-size: 2.4rem;
+        margin: 1rem 0;
+        &:hover{
+            color: v.$amarillo;
+        }
+        @include m.mq(v.$teblet){
+            margin-bottom: 0;  
+            font-size: 2rem; 
+        }
+    }
+    @include m.mq(v.$teblet){
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 2rem;
+    }
+}
+.contenido-header{
+    @include m.mq(v.$teblet){
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
