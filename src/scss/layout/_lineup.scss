@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup{
+    background-color: v.$rosa;
+    padding: 4rem 0.2rem;
+    h3{
+        color: v.$blanco;
+        text-align: center;
+    }
+    .dia{
+        color: v.$blanco;
+        text-align: center;
+    }
+    
+}
+.escenarios-contenedor{
+    
+    @include m.mq(v.$teblet){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+}
+.escenario{
+    padding: 2rem 0;
+    .nombre-escenario{
+        text-align: center;
+    }
+    .icon-lineup{
+        width: 15rem;
+        margin: 0 auto;
+    }
+    
+    
+}
+.bg-amarillo{
+    background-color: v.$amarillo;
+    li:nth-child(odd){
+        background-color: darken($color: v.$amarillo, $amount: 20%);
+    }
+}
+.bg-verde{
+    background-color: v.$verde;
+    li:nth-child(odd){
+        background-color: darken($color: v.$verde, $amount: 10%);
+    }
+}
+.calendario{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        padding: 2.5rem;
+        font-weight: bold;
+        span{
+            font-weight: normal;
+        }
+    }
+}

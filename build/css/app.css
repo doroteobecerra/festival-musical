@@ -426,6 +426,13 @@ h3 {
   font-size: 3rem;
 }
 
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .header {
   background-color: #4CB8D3;
 }
@@ -545,4 +552,63 @@ h3 {
 .contenido-festival p {
   text-align: start;
   font-size: 1.5rem;
+}
+
+.lineup {
+  background-color: #F53756;
+  padding: 4rem 0.2rem;
+}
+.lineup h3 {
+  color: #FFF;
+  text-align: center;
+}
+.lineup .dia {
+  color: #FFF;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.escenario {
+  padding: 2rem 0;
+}
+.escenario .nombre-escenario {
+  text-align: center;
+}
+.escenario .icon-lineup {
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.bg-amarillo {
+  background-color: #FEF46D;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fdec08;
+}
+
+.bg-verde {
+  background-color: #4CB8D3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #2fa1bd;
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+}
+.calendario li {
+  list-style: none;
+  padding: 2.5rem;
+  font-weight: bold;
+}
+.calendario li span {
+  font-weight: normal;
 }
