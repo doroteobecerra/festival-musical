@@ -509,3 +509,40 @@ h3 {
   font-weight: bold;
   font-size: 1rem;
 }
+
+.sobre-festival {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.imagen img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .imagen {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contenido-festival h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+.contenido-festival .sub {
+  color: #F53756;
+  text-align: center;
+}
+.contenido-festival p {
+  text-align: start;
+  font-size: 1.5rem;
+}

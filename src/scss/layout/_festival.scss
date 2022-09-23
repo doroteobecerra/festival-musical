@@ -1,0 +1,38 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.sobre-festival{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2rem 0;
+    
+    @include m.mq(v.$teblet){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+}
+.imagen{
+    img{
+        width: 100%;
+    }
+    @include m.mq(v.$teblet){
+        display: flex;
+        align-items: center;
+    }
+}
+.contenido-festival{
+    h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .sub{
+        color: v.$rosa;
+        text-align: center;
+    }
+    p{
+        text-align: start;
+        font-size: 1.5rem;
+    }
+}
