@@ -3,6 +3,7 @@
 html{
     font-size: 65.2%;
     box-sizing: border-box;
+    //scroll-behavior: smooth;
 }
 *,
 *:before
@@ -12,8 +13,15 @@ html{
 body{
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
-    margin: 0;
+    margin: 0; 
+    
+    @include m.mq(v.$tablet){
+        .body-scroll{
+            padding-top: 76.1667px;
+        }
+    }
 }
+
 p{
     font-size: 2rem;
     color: v.$negro;

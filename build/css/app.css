@@ -447,6 +447,15 @@ img {
   }
 }
 
+@media (min-width: 768px) {
+  .barraFija {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
 .navegacion-principal {
   padding: 2rem;
 }

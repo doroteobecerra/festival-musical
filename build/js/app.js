@@ -2,6 +2,38 @@ document.addEventListener('DOMContentLoaded', () => inicarApp())
 
 function inicarApp(){
     crearGaleria()
+    scrollNav()
+    barraFija()
+}
+
+function barraFija(){
+    const barra = document.querySelector('.header')
+    const festival = document.querySelector('.sobre-festival')
+    const body = document.querySelector('body')
+
+    window.addEventListener('scroll', function(){
+        let infoScrool = festival.getBoundingClientRect().bottom
+        if(infoScrool < 0){
+            barra.classList.add('barraFija')
+            body.classList.add('body-scroll')
+        }else{
+            barra.classList.remove('barraFija')
+            body.classList.remove('body-scroll')
+        }
+    })
+}
+
+function scrollNav(){
+    const links = document.querySelectorAll('.navegacion-principal a')
+
+    links.forEach( enlaces => {
+        enlaces.addEventListener('click', function(e){
+            e.preventDefault()
+            const seccion = document.querySelector(e.target.attributes.href.value)
+            seccion.scrollIntoView({behavior: "smooth"})
+            
+        })
+    })
 }
 
 function crearGaleria(){
@@ -20,6 +52,7 @@ function crearGaleria(){
         galeria.appendChild(imagenes)
 
     }
+
 
     function mostrarImagen(id){
         const imagenes = document.createElement('picture')
