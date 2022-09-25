@@ -434,7 +434,7 @@ img {
 }
 
 .header {
-  background-color: #4CB8D3;
+  background-color: #4CB8B3;
 }
 .header h1 {
   color: #FFF;
@@ -594,10 +594,10 @@ img {
 }
 
 .bg-verde {
-  background-color: #4CB8D3;
+  background-color: #4CB8B3;
 }
 .bg-verde li:nth-child(odd) {
-  background-color: #2fa1bd;
+  background-color: #3b9691;
 }
 
 .calendario {
@@ -666,4 +666,73 @@ img {
 
 .fijar-body {
   overflow: hidden;
+}
+
+.boletos {
+  background-color: #4CB8B3;
+  padding: 4rem 1rem;
+}
+.boletos h3 {
+  color: #FFF;
+  text-align: center;
+}
+.boletos .pase {
+  font-weight: normal;
+  font-size: 2.4rem;
+}
+.boletos .pase2 {
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .boletos {
+    padding: 4rem 8rem;
+  }
+  .boletos .pase2 {
+    margin-top: 0;
+  }
+}
+
+.table {
+  background-color: #FFF;
+}
+.table .titulo {
+  background-color: #F53756;
+  color: #FFF;
+  text-align: center;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  border-bottom: 0;
+}
+.table .precio {
+  background-color: #752F97;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  margin-top: 0;
+  border-bottom: 0;
+}
+.table p {
+  font-size: 1.7rem;
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid rgb(193, 192, 192);
+}
+
+@media (min-width: 768px) {
+  .contenedor-boletos {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+footer {
+  background-color: #F53756;
+  margin: 0;
+  padding: 2rem;
+}
+footer p {
+  margin: 0;
+  text-align: center;
+  color: #FFF;
 }

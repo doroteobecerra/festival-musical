@@ -1,0 +1,60 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.boletos{
+    background-color: v.$verde;
+    padding: 4rem 1rem;
+
+    h3{
+        color: v.$blanco;
+        text-align: center; 
+    }
+    .pase{
+        font-weight: normal;
+        font-size: 2.4rem;
+    }
+    .pase2{
+        margin-top: 3rem;
+    }
+    @include m.mq(v.$tablet){
+        padding: 4rem 8rem;
+        .pase2{
+            margin-top: 0;
+        }
+    }
+    
+}
+.table{
+    background-color: v.$blanco;
+    .titulo{
+        background-color: v.$rosa;
+        color: v.$blanco;
+        text-align: center;
+        padding: 0.5rem 0;
+        text-transform: uppercase;
+        border-bottom: 0;
+    }
+    .precio{
+        background-color: v.$morado;
+        color: v.$blanco;
+        text-align: center;
+        font-weight: bold;
+        padding: 0.5rem 0;
+        margin-top: 0;
+        border-bottom: 0;
+    }
+    p{
+        font-size: 1.7rem;
+        padding: 1rem;
+        margin: 0;
+        border-bottom: 1px solid rgb(193, 192, 192);
+    }
+}
+@include m.mq(v.$tablet){
+    .contenedor-boletos{
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
