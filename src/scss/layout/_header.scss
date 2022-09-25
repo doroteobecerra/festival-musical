@@ -6,7 +6,7 @@
     h1{
         color: v.$blanco;
         text-align: center;
-        @include m.mq(v.$teblet){
+        @include m.mq(v.$tablet){
             margin: 0;
             font-size: 3rem;
         }
@@ -23,12 +23,12 @@
         &:hover{
             color: v.$amarillo;
         }
-        @include m.mq(v.$teblet){
+        @include m.mq(v.$tablet){
             margin-bottom: 0;  
             font-size: 2rem; 
         }
     }
-    @include m.mq(v.$teblet){
+    @include m.mq(v.$tablet){
         display: flex;
         justify-content: space-between; 
         align-items: center; 
@@ -36,7 +36,7 @@
     }
 }
 .contenido-header{
-    @include m.mq(v.$teblet){
+    @include m.mq(v.$tablet){
         display: flex;
         justify-content: space-around;
         align-items: center;

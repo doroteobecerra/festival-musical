@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria-imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    @include m.mq(v.$tablet){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include m.mq(v.$desktop){
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    @include m.mq(v.$desktopXL){
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.galeria{
+    padding: 5rem 0;
+    h3{
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(0 0 0 / .5);
+    picture{
+        max-width: 70rem;
+        display: block;
+    }
+}
+.fijar-body{
+    overflow: hidden;
+}

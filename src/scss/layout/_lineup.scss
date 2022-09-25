@@ -16,7 +16,7 @@
 }
 .escenarios-contenedor{
     
-    @include m.mq(v.$teblet){
+    @include m.mq(v.$tablet){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
@@ -42,7 +42,7 @@
 }
 .bg-verde{
     background-color: v.$verde;
-    li:nth-child(odd){
+    li:nth-child(odd){ //agrega un estilo diferente a los impares
         background-color: darken($color: v.$verde, $amount: 10%);
     }
 }
